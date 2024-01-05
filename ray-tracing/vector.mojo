@@ -7,7 +7,7 @@ struct Vec3f:
     var data: SIMD[DType.float32, 4]  # a 1x4 array?
 
     '''Initializer methods.'''
-    @always_inline  # Question[Zain]: what does this mean?
+    @always_inline
     fn __init__(x: Float32, y: Float32, z: Float32) -> Self:
         """Convenience wrapper for the other constructor (below)."""
         return Vec3f {data: SIMD[DType.float32, 4](x, y, z, 0)}
